@@ -18,7 +18,7 @@ export class AppComponent{
   title = 'Listing posts';
   public posts: any;
   constructor(private http: HttpClient) {
-    this.http.get('http://aturuntaev-ruby-blog.herokuapp.com/posts.json')
+    this.http.get('https://aturuntaev-ruby-blog.herokuapp.com/posts.json')
       .subscribe(
         posts => this.posts = posts,
         error => this.errorMessage = <any>error);
